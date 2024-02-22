@@ -42,7 +42,7 @@ public class NoteController {
      * @param note
      * @return
      */
-    @PutMapping("/{id}")
+    @PutMapping
     public ResponseEntity<Note> updateNote(@RequestBody Note note) {
         return new ResponseEntity<>(noteService.updateNote(note), HttpStatus.OK);
     }

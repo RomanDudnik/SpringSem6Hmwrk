@@ -5,7 +5,6 @@ import org.example.SpringSem6Hmwrk.model.Note;
 import org.example.SpringSem6Hmwrk.repository.NoteRepository;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -66,7 +65,7 @@ public class NoteServiceImplement implements NoteService {
         //обновление текста заметки
         noteById.setContent(note.getContent());
         //сохранение обновленной заметки
-        return noteRepository.save(note);
+        return noteRepository.save(noteById);
     }
 
     /**
