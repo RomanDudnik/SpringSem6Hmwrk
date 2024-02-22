@@ -57,9 +57,9 @@ public class NoteServiceImplement implements NoteService {
      * @return
      */
     @Override
-    public Note updateNote(Note note) {
+    public Note updateNote(Long id, Note note) {
         //получение заметки по id
-        Note noteById = getNoteById(note.getId());
+        Note noteById = getNoteById(id);
         //обновление названия заметки
         noteById.setTitle(note.getTitle());
         //обновление текста заметки

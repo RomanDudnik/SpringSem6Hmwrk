@@ -42,9 +42,14 @@ public class NoteController {
      * @param note
      * @return
      */
-    @PutMapping
-    public ResponseEntity<Note> updateNote(@RequestBody Note note) {
-        return new ResponseEntity<>(noteService.updateNote(note), HttpStatus.OK);
+//    @PutMapping
+//    public ResponseEntity<Note> updateNote(@RequestBody Note note) {
+//        return new ResponseEntity<>(noteService.updateNote(note), HttpStatus.OK);
+//    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Note> updateNote(@PathVariable("id") Long id, @RequestBody Note note) {
+        return new ResponseEntity<>(noteService.updateNote(id, note), HttpStatus.OK);
     }
 
     /**
